@@ -234,14 +234,14 @@
 /obj/item/organ/internal/heart/cybernetic/surplus/Initialize(mapload)
 	. = ..()
 	AddElement(/datum/element/dangerous_surgical_removal)
-  
+
   /obj/item/organ/internal/heart/cybernetic/lifesupport
 	name = "life suppport heart"
 	desc = "An outdated and fragile heart with the purpose to mimic the functions of an organic human heart. \
 		Known for needing constant maintenance and extremely sensitive to external damage."
 	organ_flags = ORGAN_ROBOTIC
 	maxHealth = STANDARD_ORGAN_THRESHOLD* 0.5
-	emp_vulnerability = 100
+	emp_vulnerability = 10 //Yes, it's literally that old to the point EMPs can't do shit to it
 	COOLDOWN_DECLARE(breakdown_cooldown)
 	COOLDOWN_DECLARE(breakdown_dmg_cooldown)
 
@@ -297,4 +297,4 @@
 		owner.heal_overall_damage(brute = 15, burn = 15, required_bodytype = BODYTYPE_ORGANIC)
 		if(owner.reagents.get_reagent_amount(/datum/reagent/medicine/ephedrine) < 20)
 			owner.reagents.add_reagent(/datum/reagent/medicine/ephedrine, 10)
-      
+

@@ -4,7 +4,7 @@
 	icon = FA_ICON_ROBOT
 	value = -6
 	medical_record_text = "During physical examination, the patient's cybernetic heart was found to be at least 4 generations older than currect models. \
-		<b>Please, don't even try touching it or you'll risk blowing their entire body! </b>"
+		Please, don't even try touching it unless you fancy losing a finger or two."
 	hardcore_value = 6
 
 /datum/quirk/lifesupport/add_unique(client/client_source)
